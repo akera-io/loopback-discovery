@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 var path = require('path');
 var utils = require('./lib/utils.js');
 var Discoverer = require('./lib/discoverer.js');
