@@ -1,5 +1,4 @@
 #! /usr/bin/env node
-
 var path = require('path');
 var utils = require('./lib/utils.js');
 var Discoverer = require('./lib/discoverer.js');
@@ -53,7 +52,8 @@ setDatasource(discoverer, dsName, function(err, set) {
 
       // check the ones already set as public (update)
       for ( var m in models) {
-        models[m].isPublic = discoverer.modelConfig[models[m].name].public;
+        if (discoverer.modelConfig[models[m].name])
+          models[m].isPublic = discoverer.modelConfig[models[m].name].public;
       }
 
       utils.selectPublicModels(models, function(models) {
