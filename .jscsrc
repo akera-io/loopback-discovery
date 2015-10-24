@@ -1,0 +1,26 @@
+{ "excludeFiles":
+[ "node_modules/**"
+, "coverage"
+, "test"
+]
+, "disallowMultipleLineBreaks": true
+, "disallowMultipleVarDecl": "exceptUndefined"
+, "disallowQuotedKeysInObjects": "allButReserved"
+, "disallowSpaceAfterPrefixUnaryOperators": ["++", "--", "+", "-", "~", "!"]
+, "disallowOperatorBeforeLineBreak": ["+", "."]
+, "disallowImplicitTypeConversion": ["numeric", "boolean", "binary"]
+, "disallowSpaceAfterPrefixUnaryOperators": [ "++", "--", "+", "-", "~", "!" ]
+, "disallowSpaceBeforePostfixUnaryOperators": [ "++", "--" ]
+, "disallowKeywordsOnNewLine": [ "else" ]
+, "requireCapitalizedConstructors": true
+, "requireSpacesInsideObjectBrackets": "all"
+, "requireSpacesInsideArrayBrackets": "all"
+, "requireSpaceBeforeBinaryOperators": [ "+", "-", "/", "*", "=", "==", "===", "!=", "!==" ]
+, "requireSpaceAfterBinaryOperators": [ "+", "-", "/", "*", "=", "==", "===", "!=", "!==" ]
+, "requireSpaceAfterKeywords": [ "if", "else", "for", "while", "do", "switch", "try", "catch" ]
+, "requireSpaceBeforeBinaryOperators": [ "+", "-", "/", "*", "=", "==", "===", "!=", "!==" ]
+, "requireSpaceAfterBinaryOperators": [ "+", "-", "/", "*", "=", "==", "===", "!=", "!==" ]
+, "requireSpacesInFunctionExpression": { "beforeOpeningCurlyBrace": true }
+, "requireLineFeedAtFileEnd": true
+, "validateLineBreaks": "LF"
+} 

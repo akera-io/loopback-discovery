@@ -1,0 +1,13 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "sports": {
+    "host": "10.10.10.6",
+    "port": 37900,
+    "database": "sports2000",
+    "name": "sports",
+    "connector": "loopback-connector-akera"
+  }
+}

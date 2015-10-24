@@ -1,0 +1,35 @@
+{
+  "name": "loopback-discovery",
+  "version": "1.0.0",
+  "description": "Database model discovery script for LoopBack",
+  "author": {
+    "name": "Marian Edu",
+    "email": "marian.edu@acorn.ro"
+  },
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": {
+    "loopback-discovery": "main.js"
+  },
+  "scripts": {
+    "lint": "./node_modules/.bin/jshint ./lib main.js",
+    "checkStyle": "./node_modules/.bin/jscs ./lib main.js",
+    "pretest": "npm run-script lint && npm run-script checkStyle",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec test/*-test.js",
+    "posttest": "./node_modules/.bin/istanbul check-coverage"
+  },
+  "dependencies": {
+  	"inquirer": "^0.9.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.21.4",
+    "should": ">= 5.0",
+    "istanbul": ">= 0.3.6",
+    "jshint": ">= 2.6.0",
+    "jscs": ">= 1.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/akera-io/loopback-discovery.git"
+  }
+}
