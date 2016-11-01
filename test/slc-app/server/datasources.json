@@ -5,9 +5,17 @@
   },
   "sports": {
     "host": "10.10.10.6",
-    "port": 37900,
+    "port": 38900,
     "database": "sports2000",
     "name": "sports",
     "connector": "loopback-connector-akera"
+  },
+  "mysql": {
+  	"host": "10.10.10.6",
+  	"port": 3306,
+  	"username": "root",
+  	"password": "gh1c1toar3",
+  	"connector": "mysql",
+  	"database": "esd"
   }
 }

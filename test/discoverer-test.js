@@ -11,12 +11,18 @@ describe('LoopBack discovery', function() {
     }).should.throw();
   });
 
-  it('setApp - should not throw if valid', function() {
-    (function () {
+  it('setApp - should not throw if valid', function(done) {
+    this.timeout(30000);
+    
+    try {
       var d = new Discoverer();
       d.setApp(path.join(__dirname, 'slc-app'));
-    }).should.not.throw();
+      done();
+    } catch (err) {
+      done(err);
+    }
   });
+
 
   it('setDataSource - should throw if app not set', function() {
     (function () {
@@ -134,6 +140,27 @@ describe('LoopBack discovery', function() {
         should(models).be.instanceOf(Array);
         should(models.length).be.equal(0);
         
+        done();
+      });
+    } catch (err) {
+      done(err);
+    }
+  });
+  
+  it('discoverModels - should discover new tables from mysql datasource', function(done) {
+    this.timeout(30000);
+    
+    var d = new Discoverer();
+    d.setApp(path.join(__dirname, 'slc-app'));
+    d.setDataSource('mysql');
+    
+    try {
+      d.discoverModels({views: true, overwrite: true}, function (err, models) {
+        
+        should(models).be.instanceOf(Array);
+        d.loadModelConfiguration();
+        d.updateModels(models);
+        d.saveModelConfiguration();
         done();
       });
     } catch (err) {

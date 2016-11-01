@@ -6,24 +6,32 @@ var Discoverer = require('./lib/discoverer.js');
 var appPath = null;
 var dsName = null;
 var overwrite = false;
+var views = false;
+var all = false;
 
 for (var i = 2; i < process.argv.length; i++) {
   switch (process.argv[i]) {
-  case '-o':
-    overwrite = true;
-    break;
-  case '-d':
-    dsName = process.argv[++i];
-    break;
-  case '-h':
-  case '--help':
-    printUsage();
-    break;
-  default:
-    if (appPath === null)
-      appPath = path.resolve(process.argv[i]);
-    else
+    case '-o':
+      overwrite = true;
+      break;
+    case '-d':
+      dsName = process.argv[++i];
+      break;
+    case '-a':
+      all = true;
+      break;
+    case '-v':
+      views = true;
+      break;
+    case '-h':
+    case '--help':
       printUsage();
+      break;
+    default:
+      if (appPath === null)
+        appPath = path.resolve(process.argv[i]);
+      else
+        printUsage();
   }
 }
 
@@ -45,7 +53,11 @@ setDatasource(discoverer, dsName, function(err, set) {
 
   discoverer.loadModelConfiguration();
 
-  discoverer.discoverModels(overwrite, function(err, models) {
+  discoverer.discoverModels({
+    overwrite : overwrite,
+    all : all,
+    views : views
+  }, function(err, models) {
     checkError(err);
 
     if (models && models.length > 0) {

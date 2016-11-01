@@ -38,6 +38,15 @@ available in `/opt/strongloop/sports` while overwriting existing model definitio
 $ loopback-discovery -o -d sports /opt/strongloop/sports
 ```
 
+* By default the schema used in connection connection definition is used for discovery, however some
+loopback connectors can support additional discovery options:
+	- `all`: to use all owners/schemas for discovery use `-a` command option
+	- `views`: to include views in discovery use `-v` command option
+
+```bash
+$ loopback-discovery -a -v -d sports /opt/strongloop/sports
+```
+
 For information on configuring the connector in a LoopBack application, 
 please refer to [LoopBack documentation](https://docs.strongloop.com/display/public/LB/Connecting+models+to+data+sources).
 
