@@ -21,6 +21,6 @@
 , "requireSpaceBeforeBinaryOperators": [ "+", "-", "/", "*", "=", "==", "===", "!=", "!==" ]
 , "requireSpaceAfterBinaryOperators": [ "+", "-", "/", "*", "=", "==", "===", "!=", "!==" ]
 , "requireSpacesInFunctionExpression": { "beforeOpeningCurlyBrace": true }
-, "requireLineFeedAtFileEnd": true
+, "requireLineFeedAtFileEnd": false
 , "validateLineBreaks": "LF"
 } 

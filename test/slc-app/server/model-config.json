@@ -31,5 +31,49 @@
 	"Role": {
 		"dataSource": "db",
 		"public": false
+	},
+	"Customer": {
+		"dataSource": "mysql",
+		"public": true
+	},
+	"Order": {
+		"dataSource": "sports",
+		"public": true
+	},
+	"Account": {
+		"dataSource": "mysql",
+		"public": false
+	},
+	"License": {
+		"dataSource": "mysql",
+		"public": false
+	},
+	"News": {
+		"dataSource": "mysql",
+		"public": false
+	},
+	"Product": {
+		"dataSource": "mysql",
+		"public": false
+	},
+	"Registration": {
+		"dataSource": "mysql",
+		"public": false
+	},
+	"Sessiontoken": {
+		"dataSource": "mysql",
+		"public": false
+	},
+	"Trial": {
+		"dataSource": "mysql",
+		"public": false
+	},
+	"Usergrant": {
+		"dataSource": "mysql",
+		"public": false
+	},
+	"Version": {
+		"dataSource": "mysql",
+		"public": false
 	}
 }

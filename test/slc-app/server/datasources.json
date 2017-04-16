@@ -5,7 +5,7 @@
   },
   "sports": {
     "host": "10.10.10.6",
-    "port": 38900,
+    "port": 8900,
     "database": "sports2000",
     "name": "sports",
     "connector": "loopback-connector-akera"
